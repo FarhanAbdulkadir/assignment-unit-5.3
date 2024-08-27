@@ -34,7 +34,47 @@ console.log(addToCollection(myCollection, "The Steppers", "Kendrick Lamar", 2022
 
 
 
+function showCollection(collection){
+  for (const album of collection){
+  console.log(`${album.title}by ${album.artist}, published in ${album.yearPublished}`);
 
+
+}
+
+}
+
+
+// test the showCollection function 
+showCollection(myCollection);
+
+
+  function findByArtist(collection, artist){
+  let resultFound = [];
+  for(let i = 0; i<collection.length; i++){
+    const album = collection[i]
+    if(album.artist===artist){
+      resultFound.push(album);
+    }
+  
+  }
+
+// return the array with matching result
+  return resultFound
+}
+
+// test to findByArtist function
+console.log("Albums by kendrick Lamar")
+console.log(findByArtist(myCollection, "Kendrick Lamar"));
+
+console.log("Albums by prince")
+console.log(findByArtist(myCollection, "Prince"));
+
+
+console.log("Albums by Beach Boys")
+console.log(findByArtist(myCollection, "Beach Boys"));
+
+console.log("Albums that don't exist ")
+console.log(findByArtist(myCollection, "Drake"));
 
 
 
