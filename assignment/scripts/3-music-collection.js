@@ -35,8 +35,8 @@ console.log(addToCollection(myCollection, "The Steppers", "Kendrick Lamar", 2022
 
 
 function showCollection(collection){
-  for (const album of collection){
-  console.log(`${album.title}by ${album.artist}, published in ${album.yearPublished}`);
+  for (let album of collection){
+  console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`);
 
 
 }
@@ -75,7 +75,6 @@ console.log(findByArtist(myCollection, "Beach Boys"));
 
 console.log("Albums that don't exist ")
 console.log(findByArtist(myCollection, "Drake"));
-
 
 
 
